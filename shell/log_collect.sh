@@ -23,18 +23,25 @@ if [ ! -e $LOG_DIR ]; then mkdir -m 777 -p $LOG_DIR; fi
 
 #collect yesterday log
 #begin
+
 #collect access log
-echo "${LOG_DATE}'s access log start" >> $LOGFILE
-less ${WORK_DIR}access.log | grep $LOG_DATE >> $LOGFILE
-echo "${LOG_DATE}'s access log end" >> $LOGFILE
+if [ -e ${WORK_DIR}access.log ]; then
+    echo "${LOG_DATE}'s access log start" >> $LOGFILE
+    less ${WORK_DIR}access.log | grep $LOG_DATE >> $LOGFILE
+    echo "${LOG_DATE}'s access log end" >> $LOGFILE
+fi
 
 #collect error log
-echo "${LOG_DATE}'s error log start" >> $LOGFILE
-less ${WORK_DIR}error.log | grep $LOG_DATE >> $LOGFILE
-echo "${LOG_DATE}'s error log end" >> $LOGFILE
+if [ -e ${WORK_DIR}error.log ]; then
+    echo "${LOG_DATE}'s error log start" >> $LOGFILE
+    less ${WORK_DIR}error.log | grep $LOG_DATE >> $LOGFILE
+    echo "${LOG_DATE}'s error log end" >> $LOGFILE
+fi
 
 #collect debug log
-echo "${LOG_DATE}'s debug log start" >> $LOGFILE
-less ${WORK_DIR}debug.log | grep $LOG_DATE >> $LOGFILE
-echo "${LOG_DATE}'s debug log end" >> $LOGFILE
+if [ -e ${WORK_DIR}debug.log ]; then
+    echo "${LOG_DATE}'s debug log start" >> $LOGFILE
+    less ${WORK_DIR}debug.log | grep $LOG_DATE >> $LOGFILE
+    echo "${LOG_DATE}'s debug log end" >> $LOGFILE
+fi
 #end
