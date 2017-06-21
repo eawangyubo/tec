@@ -17,7 +17,7 @@ sed -i -e "s/enabled *= *1/enabled=0/g" /etc/yum.repos.d/epel.repo && \
 sed -i -e "s/enabled *= *1/enabled=0/g" /etc/yum.repos.d/remi.repo && \
 
 # install apache ssh
-yum install -y sudo which zip httpd httpd-tools openssh-server openssh-clients openssl mod_ssl cronie && \
+yum install -y sudo which zip httpd httpd-tools openssh-server openssh-clients openssl mod_ssl cronie postfix && \
 
 # install php supervisor
 yum install --enablerepo=epel -y libmcrypt supervisor && \
