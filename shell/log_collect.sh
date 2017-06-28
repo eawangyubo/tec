@@ -2,7 +2,7 @@
 
 # MIT License
 # Author: wang.yubo@dragon.jp
-# Add this script to cron like bellow
+# Add this script to cron like below
 # 0 0 * * * /usr/bin/bash /your/script/save/space/log_collect.sh > /dev/null 2>&1
 
 # workspace
