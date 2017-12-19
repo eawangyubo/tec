@@ -22,7 +22,7 @@ yum install -y sudo which zip httpd httpd-tools openssh-server openssh-clients o
 # install php supervisor
 yum install --enablerepo=epel -y libmcrypt supervisor python-pip && \
 yum install --enablerepo=remi -y gd-last && \
-yum install --enablerepo=remi-php70 -y php php-devel php-gd php-mbstring php-mcrypt php-mysqlnd php-pear php-xml php-opcache php-intl && \
+yum install --enablerepo=remi-php70 -y php php-devel php-gd php-mbstring php-mcrypt php-mysqlnd php-pear php-xml php-zip php-pecl-apcu php-opcache php-intl && \
 
 #clean cache
 yum clean all --enablerepo=* && \
