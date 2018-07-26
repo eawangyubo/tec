@@ -1,5 +1,3 @@
-syntax on
-colorscheme molokai
 set title
 set number
 set ambiwidth=double
